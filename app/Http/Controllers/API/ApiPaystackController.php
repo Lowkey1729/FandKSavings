@@ -98,8 +98,10 @@ class ApiPaystackController extends BaseController
                   $result = json_decode($response,true);
                   $err = curl_error($curl);
                   curl_close($curl);
-                  
-                  if ($result['status'] == true && $result['data']['status']!=="abandoned") 
+
+                  $from_last_transaction_time = strtotime(Auth::user()->last_transcation);
+                  $paid_at = strtotime($result['data']['paid_at']);
+                  if ($result['status'] == true && $result['data']['status']!=="abandoned" && $from_last_transaction<$paid_at) 
                   {
                     
                       $amount = substr($result['data']['amount'],0, -2) ;
