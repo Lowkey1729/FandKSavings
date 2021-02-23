@@ -11,28 +11,28 @@ Creating an API for FandK E-Wallet system doing the folowing
 - Users can fund other users wallet using a unique identiifer that each user has.
 
 #Models
--User
--Wallet
--With a one to one relationship.
+- User
+- Wallet
+- With a one to one relationship.
 
 
 ## Users can create an account and welcome email would be sent to the cusotmer's email upon registration.
--I used Postman to test this section of the API.
--Installing Laravel 8 .
--Installing Laravel Passport for Authenticating APIs.
--I Created Migration files for users and wallets.
--Change my api driver in auth.php found in Config folder from "token" to "passport".
--Created an API Folder in Controller Folder to Keep all The API Controllers there.
--The Major Controllers used are (ApiPaystackController,BaseController,RegisterController,WalletApiController)
--BaseController controls the api response for success Response and Error response
--RegisterController for registration and Login of users.
--All of the route is stored in api.php
--All of the routes are protected except the login and register route
--I created theCross-Origin Resource Sharing (CORS) Configuration middleware to allow the the api access to the methods, headers, and origin
--I also created the (json.response) middleware to Accept headers or Content-type like 'application\json'.
--These middlewares make it easily accessible to access tokens and cookies that would be used to authenticate users consuming  the api.
--I created FandKmail.php using the php artisan make:mail command which is used to control the mail to be sent to the registered email address.
--The mail is tested using Mailtrap
+- I used Postman to test this section of the API.
+- Installing Laravel 8 .
+- Installing Laravel Passport for Authenticating APIs.
+- I Created Migration files for users and wallets.
+- Change my api driver in auth.php found in Config folder from "token" to "passport".
+- Created an API Folder in Controller Folder to Keep all The API Controllers there.
+- The Major Controllers used are (ApiPaystackController,BaseController,RegisterController,WalletApiController)
+- BaseController controls the api response for success Response and Error response
+- RegisterController for registration and Login of users.
+- All of the route is stored in api.php
+- All of the routes are protected except the login and register route
+- I created theCross-Origin Resource Sharing (CORS) Configuration middleware to allow the the api access to the methods, headers, and origin
+- I also created the (json.response) middleware to Accept headers or Content-type like 'application\json'.
+- These middlewares make it easily accessible to access tokens and cookies that would be used to authenticate users consuming  the api.
+- I created FandKmail.php using the php artisan make:mail command which is used to control the mail to be sent to the registered email address.
+- The mail is tested using Mailtrap
 
 
 ## Users funding his/her wallet via Paystack.
