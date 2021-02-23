@@ -21,6 +21,12 @@ Creating an API for FandK E-Wallet system doing the folowing
 - ApiPaystackController
 - WalletApiController
 
+
+
+## Mail Testing
+- Mailtrap
+
+
 ## Users can create an account and welcome email would be sent to the cusotmer's email upon registration.
 - I used Postman to test this section of the API.
 - Installing Laravel 8 .
