@@ -99,7 +99,7 @@ class ApiPaystackController extends BaseController
                   $err = curl_error($curl);
                   curl_close($curl);
                   
-                  if ($result['status'] == true && $result['data']['status']==="abandoned") 
+                  if ($result['status'] == true && $result['data']['status']!=="abandoned") 
                   {
                     
                       $amount = substr($result['data']['amount'],0, -2) ;
