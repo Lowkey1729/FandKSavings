@@ -80,7 +80,7 @@ class WalletApiController extends BaseController
 	     */
     	
     	$to_wallet->balance = $to_wallet->balance + $amount;
-    	$to_wallet->details_of_last_transaction = $from_wallet->name." Funded your wallet.";
+    	$to_wallet->details_of_last_transaction = $from_wallet->user->name." Funded your wallet.";
     	$to_wallet->save();
 
 
