@@ -10,11 +10,16 @@ Creating an API for FandK E-Wallet system doing the folowing
 - Users can fund their wallet using thier atm cards.
 - Users can fund other users wallet using a unique identiifer that each user has.
 
-#Models
+## Models
 - User
 - Wallet
 - With a one to one relationship.
 
+## Controllers
+- RegisterController
+- BaseController
+- ApiPaystackController
+- WalletApiController
 
 ## Users can create an account and welcome email would be sent to the cusotmer's email upon registration.
 - I used Postman to test this section of the API.
